@@ -16,7 +16,6 @@ st.set_page_config(page_title="Lemon Mandi Dashboard", layout="wide")
 st.title("Lemon Mandi Dashboard")
 
 # Load dataset
-@st.cache_data
 def load_data(file_path):
     try:
         df = pd.read_csv(file_path)
@@ -152,3 +151,4 @@ if df is not None:
     st.sidebar.download_button(" Download Cleaned Data", data=df_cleaned.to_csv(index=False), file_name="cleaned_lemon_data.csv", mime='text/csv')
 else:
     st.warning("Upload a CSV file in sidebar to get started ")
+
