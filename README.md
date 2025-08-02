@@ -23,5 +23,4 @@ Welcome to the **Lemon Mandi Dashboard** – an intelligent, interactive, and vi
 - Lottie Animations  
 - Pandas, Numpy, Scikit-learn
 
-## Folder Structure
 
