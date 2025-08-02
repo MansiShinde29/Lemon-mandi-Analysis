@@ -42,7 +42,7 @@ def remove_outliers_iqr(df, column):
 DATA_FILE_PATH = r"C:\Users\ASUS\Downloads\LemonPrices.csv"
 df = load_data(DATA_FILE_PATH)
 
-@st
+@st.cache_data
 def generate_forecast(_df):
     """Generates and returns a Prophet forecast."""
     # Prepare data for Prophet
@@ -151,4 +151,5 @@ if df is not None:
     st.sidebar.download_button(" Download Cleaned Data", data=df_cleaned.to_csv(index=False), file_name="cleaned_lemon_data.csv", mime='text/csv')
 else:
     st.warning("Upload a CSV file in sidebar to get started ")
+
 
